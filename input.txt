@@ -1,0 +1,61 @@
+AI Generation and Game Development
+- David Stark
+- Swiss Game Hub
+- June 2023
+Parts
+- How does it work and how do you use it?
+- Legal and moral arguments
+- How will it affect game development?
+How does it work?
+- Vast amounts of data
+- Find patterns and correlations
+- Reproduce stuff that fits those patterns and correlations
+- No ability to do maths and logic
+Three tools to try
+- ChatGPT
+- Midjourney
+- GitHub Copilot
+chatgpt.png Asking ChatGPT to come up with fake history
+midjourney.png Midjourney 5.1 "oil painting of a knight sitting on a red komodo dragon --ar 16:9"
+copilot.png GitHub Copilot suggesting object properties
+collision.png Copilot co-created simple game
+Legality
+- Models based on data scraped by ignoring copyright
+- Copilot previously verbatim reproduced GPL code
+Moral Arguments
+- Using people's work as raw material to not pay them
+- But all art is inspired and remixed
+- But corporations tried to kill remixing with copyright maximalism
+- "Innovation" that uses tech to disempower workers, like Uber
+- But you may have to go with the flow or be outcompeted
+The Future
+- AI goes in summer/winter cycles, but where are we in the cycle?
+- Some indications investors are cooling on AI, bubble may burst
+- The current level of tech is already changing things
+My Experience
+- Portraits for DLC: Midjourney not quite good enough 6 months ago
+- Now good enough
+- Except it can't do certain things
+Midjourney Limitations
+aristocrats.png Midjourney 5.1 "oil painting of a heavily scarred pakistani aristocrat, portrait, close up --ar 16:9"
+horseartillery.png Midjourney 5.1 "oil painting of horse artillery --ar 16:9"
+real-horse-artillery.jpg Model of real horse artillery, Swedish Army Museum, Stockholm, Photograph: Peter Isotalo
+Subtle Trap 1: Limits to Creativity
+- You adjust your plans based on what you can generate
+- What you can generate is based on what's already out there
+- You can never break the mold
+Subtle Trap 2: Deskilling
+- AI is already great at replacing junior/underpaid people
+- Senior people still (always?) needed for thinking, creativity
+- Can you get senior people if there are no junior jobs?
+Projected Outcome
+- Big competitive advantage of using AI for rote work
+- Near 100% use in mass-market games that use cheap labor right now
+- Otherwise, mixture of AI and non-AI use, attempts to differentiate
+Longer Term
+- Visual quality of games increases
+- Creativity decreases
+- The rich get richer
+- Plus ça change?
+But
+- You are going to have to wrestle with these questions in the coming years

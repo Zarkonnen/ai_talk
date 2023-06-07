@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> AI Generation and Game Development
+</title>
+<style>,
+@font-face {
+	font-family: Montserrat;
+	src: url('Montserrat-Medium.ttf');
+}
+html {
+    cursor: none;
+}
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+#caption {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1em;
+	background: white;
+	font-size: 150%;
+}
+#title {
+    color: #4799c8;
+    font-size: 400%;
+    margin-top: 6vw;
+    margin-bottom: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#points {
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 250%;
+}
+#points li {
+    list-style: none;
+    margin-bottom: 1em;
+}
+</style>
+<script>
+var slides = [{"points": ["David Stark", "Swiss Game Hub", "June 2023"], "title": "AI Generation and Game Development"}, {"points": ["How does it work and how do you use it?", "Legal and moral arguments", "How will it affect game development?"], "title": "Parts"}, {"points": ["Vast amounts of data", "Find patterns and correlations", "Reproduce stuff that fits those patterns and correlations", "No ability to do maths and logic"], "title": "How does it work?"}, {"points": ["ChatGPT", "Midjourney", "GitHub Copilot"], "title": "Three tools to try"}, {"caption": "Asking ChatGPT to come up with fake history", "image": "chatgpt.png", "points": [], "title": "chatgpt.png Asking ChatGPT to come up with fake history"}, {"caption": "Midjourney 5.1 \"oil painting of a knight sitting on a red komodo dragon --ar 16:9\"", "image": "midjourney.png", "points": [], "title": "midjourney.png Midjourney 5.1 \"oil painting of a knight sitting on a red komodo dragon --ar 16:9\""}, {"caption": "GitHub Copilot suggesting object properties", "image": "copilot.png", "points": [], "title": "copilot.png GitHub Copilot suggesting object properties"}, {"caption": "Copilot co-created simple game", "image": "collision.png", "points": [], "title": "collision.png Copilot co-created simple game"}, {"points": ["Models based on data scraped by ignoring copyright", "Copilot previously verbatim reproduced GPL code"], "title": "Legality"}, {"points": ["Using people's work as raw material to not pay them", "But all art is inspired and remixed", "But corporations tried to kill remixing with copyright maximalism", "\"Innovation\" that uses tech to disempower workers, like Uber", "But you may have to go with the flow or be outcompeted"], "title": "Moral Arguments"}, {"points": ["AI goes in summer/winter cycles, but where are we in the cycle?", "Some indications investors are cooling on AI, bubble may burst", "The current level of tech is already changing things"], "title": "The Future"}, {"points": ["Portraits for DLC: Midjourney not quite good enough 6 months ago", "Now good enough", "Except it can't do certain things"], "title": "My Experience"}, {"points": [], "title": "Midjourney Limitations"}, {"caption": "Midjourney 5.1 \"oil painting of a heavily scarred pakistani aristocrat, portrait, close up --ar 16:9\"", "image": "aristocrats.png", "points": [], "title": "aristocrats.png Midjourney 5.1 \"oil painting of a heavily scarred pakistani aristocrat, portrait, close up --ar 16:9\""}, {"caption": "Midjourney 5.1 \"oil painting of horse artillery --ar 16:9\"", "image": "horseartillery.png", "points": [], "title": "horseartillery.png Midjourney 5.1 \"oil painting of horse artillery --ar 16:9\""}, {"caption": "Model of real horse artillery, Swedish Army Museum, Stockholm, Photograph: Peter Isotalo", "image": "real-horse-artillery.jpg", "points": [], "title": "real-horse-artillery.jpg Model of real horse artillery, Swedish Army Museum, Stockholm, Photograph: Peter Isotalo"}, {"points": ["You adjust your plans based on what you can generate", "What you can generate is based on what's already out there", "You can never break the mold"], "title": "Subtle Trap 1: Limits to Creativity"}, {"points": ["AI is already great at replacing junior/underpaid people", "Senior people still (always?) needed for thinking, creativity", "Can you get senior people if there are no junior jobs?"], "title": "Subtle Trap 2: Deskilling"}, {"points": ["Big competitive advantage of using AI for rote work", "Near 100% use in mass-market games that use cheap labor right now", "Otherwise, mixture of AI and non-AI use, attempts to differentiate"], "title": "Projected Outcome"}, {"points": ["Visual quality of games increases", "Creativity decreases", "The rich get richer", "Plus \u00e7a change?"], "title": "Longer Term"}, {"points": ["You are going to have to wrestle with these questions in the coming years"], "title": "But"}] ;
+</script>
+<script>
+var index = 0;
+function showSlide() {
+    if (slides[index].image) {
+        document.getElementById("title").innerHTML = "";
+        document.getElementById("image").src = slides[index].image;
+        document.getElementById("image").style.display = "block";
+        document.getElementById("caption").innerHTML = slides[index].caption;
+        document.getElementById("caption").style.display = "block";
+    } else {
+        document.getElementById("title").innerHTML = slides[index].title;
+        document.getElementById("image").src = "";
+        document.getElementById("image").style.display = "none";
+        document.getElementById("caption").style.display = "none";
+    }
+    document.getElementById("points").innerHTML = slides[index].points.map(function(p) {
+        return "<li>" + p + "</li>";
+    }).join("");
+}
+
+function next() {
+    if (index < slides.length - 1) {
+        index++;
+        showSlide();
+    }
+}
+
+function prev() {
+    if (index > 0) {
+        index--;
+        showSlide();
+    }
+}
+
+function keyup(event) {
+    if (event.code == "ArrowLeft") {
+        prev();
+    } else if (event.code == "ArrowRight" || event.code == "Space") {
+        next();
+    }
+}
+</script>
+</head>
+<body onClick="next()" onKeyUp="keyup(event)">
+<div style="width: 100%; height: 89px; background-color: #4799c8;">
+<img src="sgh.png" style="position: fixed; top: 10px; left: 10px; height: 69px;">
+</div>
+<img id="image">
+<div id="caption"></div>
+<div id="title"></div>
+<ul id="points"></ul>
+<script>
+showSlide();
+</script>
+</body>
+</html>
+
